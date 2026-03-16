@@ -1,0 +1,34 @@
+{
+  "generated_at_utc": "2026-03-11T21:28:23.646284+00:00",
+  "dataset_name": "DOF: Cooperative Comparable Rental Income (Citywide)",
+  "dataset_id": "myei-c3fa",
+  "dataset_portal": "https://data.cityofnewyork.us",
+  "api_endpoint": "https://data.cityofnewyork.us/resource/myei-c3fa.json",
+  "exact_request_url": "https://data.cityofnewyork.us/resource/myei-c3fa.json?%24select=boro_block_lot%2Caddress%2Cneighborhood%2Cbuilding_classification%2Cgross_sqft%2Cestimated_gross_income%2Cestimated_expense%2Cnet_operating_income%2Creport_year&%24where=report_year%3D%272022%27+and+address+is+not+null+and+gross_sqft+is+not+null+and+estimated_gross_income+is+not+null+and+estimated_expense+is+not+null+and+net_operating_income+is+not+null&%24order=estimated_gross_income+DESC&%24limit=5000",
+  "query": {
+    "report_year": 2022,
+    "records_requested_for_output": 100,
+    "fetch_limit": 5000
+  },
+  "output_files": {
+    "csv": "/content/drive/MyDrive/Fin-Tech-Assignment/data/real_property_financials_nyc.csv",
+    "metadata_json": "/content/drive/MyDrive/Fin-Tech-Assignment/data/real_property_financials_nyc_metadata.json",
+    "seed_sql": "/content/drive/MyDrive/Fin-Tech-Assignment/sql/seed.sql"
+  },
+  "columns_used": [
+    "boro_block_lot",
+    "address",
+    "neighborhood",
+    "building_classification",
+    "gross_sqft",
+    "estimated_gross_income",
+    "estimated_expense",
+    "net_operating_income",
+    "report_year"
+  ],
+  "notes": [
+    "Property records are sourced from NYC DOF Cooperative Comparable Rental Income data.",
+    "property_type is a simplified mapping derived from building_classification.",
+    "net_income in the demo dataset is populated from net_operating_income, not GAAP net income."
+  ]
+}
